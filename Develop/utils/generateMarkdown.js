@@ -12,8 +12,8 @@ class MarkDown {
   static renderLicenseLink(license) {
     const licenseLinks = {
       mit: '[![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
-      isc: '[ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
-      gnugplv3: '[GNUGPLv3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://opensource.org/licenses/lgpl-3.0)'
+      isc: '[![ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
+      gnugplv3: '[![GNUGPLv3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://opensource.org/licenses/lgpl-3.0)'
     }
     return licenseLinks[license]
 
