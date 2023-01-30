@@ -2,61 +2,59 @@ class MarkDown {
 
   static renderLicenseBadge(license) {
     const badges = {
-      mit: '![GitHub](https://img.shields.io/github/license/gpkarlsson/09-Nodejs-ReadMe-Generator?style=plastic)',
-      isc: '[![License: ISC'
-      //gnup1v3:
+      mit:  '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
+      isc: '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
+      gnugplv3:  '[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://opensource.org/licenses/lgpl-3.0)'
     }
+    return badges[license]
+  }
+
+  static renderLicenseLink(license) {
+    const licenseLinks = {
+      mit: '[MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
+      isc: '[ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
+      gnugplv3: '[GNUGPLv3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://opensource.org/licenses/lgpl-3.0)'
+    }
+    return licenseLinks[license]
+
+  }
+
+  static renderLicenseSection(license) {
+    
   }
 
   static generateMarkdown(data) {
-    return `
-    # ${data.title}
+    return ` 
+# ${data.title}
     
 
-    ## Description
-    ${data.description}
-    
-    ## Table of Contents
-    - [Project Description](#Description)
-    - [Usage](#Usage)
-    - [Credits](#Credits)
-    - [Installation](#Installation)
 
-    ## Usage
+## Description
+${data.description}
 
-    ## Credits
-    ${data.credits}
+## Table of Contents
+- [Project Description](#Description)
+- [Usage](#Usage)
+- [Credits](#Credits)
+- [Installation](#Installation)
 
-    ## Installation
-    ${data.installation}
+## Usage
 
-    ## Contact
-    ${data.email}
-    ${data.github}
+## Credits
+${data.credits}
 
-    ## License
-    ${data.license} + # Released under MIT License
-    MIT License
+## Installation
+${data.installation}
 
-    Copyright (c) [2023] [Gordon Karlsson]
+## Contact
+${data.email}
+${data.github}
 
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
+## License
+${this.renderLicenseLink(data.license)}
+MIT License
 
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
 
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.
   `;
   }
 }
