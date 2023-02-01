@@ -13,7 +13,7 @@ Using the Inquirer Package and Node.js v16.19.0, this project generates a profes
 - [License](#License)
 
 ## Usage
-[Usage Video](https://user-images.githubusercontent.com/114494147/216132329-f0243726-aa8b-4f3d-8eaf-7b0fa60faea3.webm)
+[Functionality video](https://drive.google.com/file/d/13HMu3oYL8XqjKkZljWvtjMLQ4-FLyKou/view)
 
 ## Installation
 Install Node.js v16.19.0, `npm i inquirer@8.2.4`
