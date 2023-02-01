@@ -9,13 +9,11 @@ Using the Inquirer Package and Node.js v16.19.0, this project generates a profes
 ## Table of Contents
 - [Project Description](#Description)
 - [Usage](#Usage)
-- [Credits](#Credits)
 - [Installation](#Installation)
+- [License](#License)
 
 ## Usage
-
-## Credits
-undefined
+[Usage Video](https://user-images.githubusercontent.com/114494147/216132329-f0243726-aa8b-4f3d-8eaf-7b0fa60faea3.webm)
 
 ## Installation
 Install Node.js v16.19.0, `npm i inquirer@8.2.4`
