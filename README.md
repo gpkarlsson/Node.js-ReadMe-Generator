@@ -1,7 +1,7 @@
  
 # Node.js Readme Generator
     
-
+[![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 Using the Inquirer Package and Node.js v16.19.0, this project generates a professional ReadMe from user input.
@@ -25,7 +25,7 @@ gpkarlsson72@gmail.com
 github.com/gpkarlsson
 
 ## License
-[![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 MIT License
 
 
