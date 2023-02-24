@@ -3,8 +3,6 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const MarkDown = require('./utils/generateMarkdown');
 
-// Array of questions for user input
-
 //Application questions
 const questions = [
     {
@@ -43,6 +41,11 @@ const questions = [
         message: 'Github?',
     },
     {
+        type: 'input',
+        name: 'shields',
+        message: 'What is the unique URL of your repository?',
+    },
+    {
         type: 'list',
         name: 'license',
         message: 'What license does your project use?',
@@ -53,8 +56,8 @@ const questions = [
     },
 ];
 
-// TODO: Create a function to write README file
-//function writeToFile(fileName, data) { }
+// Function to write README file
+
 
 
 function runQuery() {

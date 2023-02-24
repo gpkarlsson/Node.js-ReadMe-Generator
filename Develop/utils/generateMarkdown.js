@@ -2,9 +2,9 @@ class MarkDown {
 
   static renderLicenseBadge(license) {
     const badges = {
-      mit:  '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
-      isc: '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
-      gnugplv3:  '[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://opensource.org/licenses/lgpl-3.0)'
+      mit:  '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)(https://opensource.org/licenses/MIT)',
+      isc: '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)(https://opensource.org/licenses/ISC)',
+      gnugplv3:  '[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)(https://opensource.org/licenses/lgpl-3.0)'
     }
     return badges[license]
   }
@@ -26,7 +26,9 @@ class MarkDown {
   static generateMarkdown(data) {
     return ` 
 # ${data.title}
-    
+  ![Top Language](https://img.shields.io/github/languages/top/${data.github}/${data.shields})
+  ![Language Count](https://img.shields.io/github/languages/count/${data.github}/${data.shields})
+  ${this.renderLicenseLink(data.license)}
 
 
 ## Description
@@ -47,14 +49,12 @@ ${data.credits}
 ${data.installation}
 
 ## Contact
-${data.email}
-${data.github}
+Contact me via email at: ${data.email}
+https://github.com/${data.github}
 
 ## License
-${this.renderLicenseLink(data.license)}
+
 MIT License
-
-
   `;
   }
 }
